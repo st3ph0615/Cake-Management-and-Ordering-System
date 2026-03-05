@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetOrder</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img class="logo-img" src="./assets/logos.png" alt="sweetorder logo">
+            </div>
+
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Cakes</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Contacts</a>
+            </nav>
+
+            <div class="nav-right">
+                <img class="cart-icon" src="./assets/cart.png" alt="cart icon">
+            </div>
+
+        </div>
+    </header>
+
+    <section class="shop-controls">
+
+    <div class="controls-container">
+
+        <input 
+            type="text" 
+            placeholder="Search cakes..."
+            class="search-bar"
+        >
+
+        <label for="category">Category</label>
+        <select id="category" class="category-filter">
+            <option value="">All Cakes</option>
+            <option value="birthday">Birthday Cakes</option>
+            <option value="wedding">Wedding Cakes</option>
+            <option value="cupcake">Cupcakes</option>
+            <option value="custom">Custom Cakes</option>
+        </select>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+<h2>Our Cakes</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/cake1.png" alt="">
+
+<h3>Strawberry Dream Cake</h3>
+
+<p class="price">$18.00</p>
+
+<button class="add-cart">Add to Cart</button>
+</div>
+
+
+<div class="product-card">
+<img src="images/cake2.png" alt="">
+
+<h3>Chocolate Delight</h3>
+
+<p class="price">$20.00</p>
+
+<button class="add-cart">Add to Cart</button>
+</div>
+
+
+<div class="product-card">
+<img src="images/cake3.png" alt="">
+
+<h3>Wedding Vanilla Cake</h3>
+
+<p class="price">$45.00</p>
+
+<button class="add-cart">Add to Cart</button>
+</div>
+
+</div>
+
+</section>
+
+<script src="homepage.js"></script>
+</body>
+</html>
