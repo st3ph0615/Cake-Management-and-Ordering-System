@@ -39,8 +39,8 @@
             class="search-bar"
         >
 
-        <label for="category">Category</label>
-        <select id="category" class="category-filter">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter" class="category-filter">
             <option value="">All Cakes</option>
             <option value="birthday">Birthday Cakes</option>
             <option value="wedding">Wedding Cakes</option>
@@ -58,19 +58,41 @@
 
 <div class="product-grid">
 
-<div class="product-card">
-<img src="images/cake1.png" alt="">
+<div class="product-card" data-category="wedding">
+<img src="./assets/3layer_weddingcake.jpg" alt="">
 
-<h3>Strawberry Dream Cake</h3>
+<h3 class="product-title">Strawberry Dream Cake</h3>
+<p class="product-info">A delicious strawberry cake perfect for any celebration.</p>
 
-<p class="price">$18.00</p>
+<p class="product-price">$18.00</p>
 
 <button class="add-cart">Add to Cart</button>
 </div>
 
 
+<div class="product-card" data-category="birthday">
+<img src="./assets/birthdaycake_2.jpg" alt="">
+
+<h3>Chocolate Delight</h3>
+
+<p class="price">$20.00</p>
+
+<button class="add-cart">Add to Cart</button>
+</div>
+
+
+<div class="product-card" data-category="anniversary">
+<img src="./assets/anniversarycake_3.jpg" alt="">
+
+<h3>Wedding Vanilla Cake</h3>
+
+<p class="price">$45.00</p>
+
+<button class="add-cart">Add to Cart</button>
+</div>
+
 <div class="product-card">
-<img src="images/cake2.png" alt="">
+<img src="./assets/3layer_weddingcake_3.jpg" alt="">
 
 <h3>Chocolate Delight</h3>
 
@@ -91,6 +113,10 @@
 </div>
 
 </div>
+
+</div>
+
+
 
 </section>
 
