@@ -33,17 +33,32 @@ filter.addEventListener("change", function () {
 
 });
 
+
 //open overlay
 const addButtons = document.querySelectorAll(".add-cart");
+
 const overlay = document.getElementById("cartOverlay");
+const cartImage = document.getElementById("cartImage");
+const cartName = document.getElementById("cartName");
+const cartPrice = document.getElementById("cartPrice");
 
-addButtons.forEach(btn => {
+addButtons.forEach(button => {
 
-btn.addEventListener("click", () => {
+    button.addEventListener("click", function(){
 
-overlay.classList.add("active");
+        const product = this.closest(".product-card");
 
-});
+        const image = product.querySelector(".product-img").src;
+        const name = product.querySelector(".product-name").innerText;
+        const price = product.querySelector(".product-price").innerText;
+
+        cartImage.src = image;
+        cartName.innerText = name;
+        cartPrice.innerText = price;
+
+        overlay.classList.add("active");
+
+    });
 
 });
 

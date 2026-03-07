@@ -49,104 +49,75 @@
         </select>
 
     </div>
-
 </section>
 
+<!--PRODUCTS GRID-->
 <section class="products">
 
-<h2>Our Cakes</h2>
+    <h2>Our Cakes</h2>
+    <div class="product-grid">
+        <div class="product-card" data-category="wedding">
+            <img class="product-img" src="./assets/3layer_weddingcake.jpg" alt="">
+            <h3 class="product-name">Strawberry Dream Cake</h3>
+            <p class="product-info">A delicious strawberry cake perfect for any celebration.</p>
+            <p class="product-price">$18.00</p>
+            <button class="add-cart" type="button">Add to Cart</button>
+        </div>
 
-<div class="product-grid">
-
-<div class="product-card" data-category="wedding">
-<img src="./assets/3layer_weddingcake.jpg" alt="">
-
-<h3 class="product-title">Strawberry Dream Cake</h3>
-<p class="product-info">A delicious strawberry cake perfect for any celebration.</p>
-
-<p class="product-price">$18.00</p>
-
-<button class="add-cart">Add to Cart</button>
+        <div class="product-card" data-category="birthday">
+            <img class="product-img" src="./assets/3layer_weddingcake.jpg" alt="">
+            <h3 class="product-name">Chocolate Delight</h3>
+            <p class="product-price">$20.00</p>
+            <button class="add-cart" type="button">Add to Cart</button>
+        </div>
+        
+        <div class="product-card" data-category="anniversary">
+            <img class="product-img" src="./assets/3layer_weddingcake.jpg" alt="">
+            <h3 class="product-name">Wedding Vanilla Cake</h3>
+            <p class="product-price">$45.00</p>
+            <button class="add-cart" type="button">Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="./assets/3layer_weddingcake.jpg" alt="">
+            <h3 class="product-name">Chocolate Delight</h3>
+            <p class="product-price">$20.00</p>
+            <button class="add-cart" type="button">Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="./assets/3layer_weddingcake.jpg" alt="">
+            <h3 class="product-name">Wedding Vanilla Cake</h3>
+            <p class="product-price">$45.00</p>
+            <button class="add-cart" type="button">Add to Cart</button>
+        </div>
+    </div>
 </div>
 
-
-<div class="product-card" data-category="birthday">
-<img src="./assets/birthdaycake_2.jpg" alt="">
-
-<h3>Chocolate Delight</h3>
-
-<p class="price">$20.00</p>
-
-<button class="add-cart">Add to Cart</button>
-</div>
-
-
-<div class="product-card" data-category="anniversary">
-<img src="./assets/anniversarycake_3.jpg" alt="">
-
-<h3>Wedding Vanilla Cake</h3>
-
-<p class="price">$45.00</p>
-
-<button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-<img src="./assets/3layer_weddingcake_3.jpg" alt="">
-
-<h3>Chocolate Delight</h3>
-
-<p class="price">$20.00</p>
-
-<button class="add-cart">Add to Cart</button>
-</div>
-
-
-<div class="product-card">
-<img src="images/cake3.png" alt="">
-
-<h3>Wedding Vanilla Cake</h3>
-
-<p class="price">$45.00</p>
-
-<button class="add-cart">Add to Cart</button>
-</div>
-
-</div>
-
-</div>
-
-
-
+<!--CART OVERLAY (MODAL)-->
 </section>
-
 <div id="cartOverlay" class="cart-overlay">
-
-  <div class="cart-modal">
-
-    <h2>Item Added to Cart</h2>
-
-    <div class="cart-item">
-
-      <img src="assets/3layer_weddingcake.jpg" id="cartImage" alt="">
-
-      <div class="cart-info">
-        <h3 id="cartName">Cake Name</h3>
-        <p id="cartPrice">$35.00</p>
-      </div>
-
+    <div class="cart-modal">
+        <h2>Item Added to Cart</h2>
+        <div class="cart-item">
+            <img src="assets/3layer_weddingcake.jpg" id="cartImage" alt="">
+            <div class="cart-info">
+            <h3 id="cartName">Cake Name</h3>
+            <p id="cartPrice">$35.00</p>
+        </div>
     </div>
-
+    
     <div class="cart-actions">
-      <button class="continue-btn">Continue Shopping</button>
-      <button class="checkout-btn">Go To Cart</button>
+        <button class="continue-btn">Continue Shopping</button>
+        <button class="checkout-btn" onclick="window.location.href='cart.html'">
+            Go To Cart
+        </button>
     </div>
-
-  </div>
-
+</div>
 </div>
 
-
+<script src="cart.js"></script>
 <script src="homepage.js"></script>
+
 </body>
 </html>
