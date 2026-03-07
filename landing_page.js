@@ -8,20 +8,18 @@ galleries.forEach(gallery => {
   thumbs.forEach(thumb => {
     thumb.addEventListener("click", () => {
 
-      // change the main image
       mainImage.src = thumb.src;
 
-      // remove active border from others
       thumbs.forEach(t => t.classList.remove("active"));
 
-      // add active to clicked
       thumb.classList.add("active");
 
     });
   });
-//scrollbar
+
 });
 
+//scrollbar
 const scrollContainer = document.getElementById("productScroll");
 
 document.querySelector(".scroll-btn.left").addEventListener("click", () => {

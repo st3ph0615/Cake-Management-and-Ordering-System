@@ -3,56 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign Up</title>
+<title>Login to your account</title>
 
 <link rel="stylesheet" href="Login.css">
 
-<!-- Icons -->
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-<a href="landing_page.html" class="back-home">
-    <i class="fa-solid fa-arrow-left"></i>
-    Back to Home
-</a>
-<div class="container">
 
-    <!-- FORM CARD -->
-    <div class="form-card">
+    <a href="landing_page.html" class="back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Home
+    </a>
+    
+    <div class="container">
+        <!-- FORM CARD -->
+         <div class="form-card">
+            <h2>Login to your account</h2>
 
-        <h2>Sign Up</h2>
+            <div class="input-box">
+                <input type="email" placeholder="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            
+            <a href="homepage.html"><button class="signup-btn" >Sign Up</button></a>
 
-        <div class="input-box">
-            <input type="text" placeholder="User name">
-            <i class="fa-solid fa-user"></i>
+            
+            <a href="createAccount.html">
+                <p class="login-text">Don't have an account?</p>
+            </a>
+            <a href="">
+                <p class="forgot-password">Forgot Password?</p>
+            </a>
+            
+
         </div>
 
-        <div class="input-box">
-            <input type="email" placeholder="Email">
-            <i class="fa-solid fa-envelope"></i>
+        <!-- SIDE LOGO IMAGE -->
+         <div class="image-box">
+            <img src="./assets/lgo.png" alt="">
         </div>
-
-        <div class="input-box">
-            <input type="password" placeholder="Password">
-            <i class="fa-solid fa-lock"></i>
-        </div>
-
-        <a href="homepage.html"><button class="signup-btn" >Sign Up</button></a>
-        <a href="createAccount.html">
-        <p class="login-text">Already Have Account?</p>
-        </a>
-
     </div>
-
-
-    <!-- IMAGE SIDE -->
-    <div class="image-box">
-        <img src="./assets/lgo.png" alt="">
-    </div>
-
-</div>
 
 </body>
 </html>
