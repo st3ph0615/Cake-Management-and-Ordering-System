@@ -70,4 +70,8 @@ overlay.classList.remove("active");
 
 });
 
+// PAGE FADE IN
+window.addEventListener("load", () => {
+document.body.classList.add("page-loaded");
+});
 
