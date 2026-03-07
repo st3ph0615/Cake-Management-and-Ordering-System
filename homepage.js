@@ -32,3 +32,27 @@ filter.addEventListener("change", function () {
     });
 
 });
+
+//open overlay
+const addButtons = document.querySelectorAll(".add-cart");
+const overlay = document.getElementById("cartOverlay");
+
+addButtons.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+overlay.classList.add("active");
+
+});
+
+});
+
+//close overlay
+
+document.querySelector(".continue-btn").addEventListener("click", ()=>{
+
+overlay.classList.remove("active");
+
+});
+
+
