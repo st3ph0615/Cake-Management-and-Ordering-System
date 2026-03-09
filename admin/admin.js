@@ -1,3 +1,4 @@
+let editingRow = null;
 // Load page and highlight active menu
 function loadPage(page, element){
 
@@ -198,6 +199,18 @@ return;
 
 let table = document.getElementById("categoryTable");
 
+if(editingRow){
+
+editingRow.children[1].innerText = name;
+editingRow.children[4].innerText = description;
+editingRow.querySelector("select").value = status;
+
+alert("Category updated successfully!");
+
+editingRow = null;
+
+}else{
+
 let rowCount = table.rows.length + 1;
 
 let newRow = table.insertRow();
@@ -217,18 +230,59 @@ newRow.innerHTML = `
 <td>${description}</td>
 
 <td>
-<button class="edit">Edit</button>
+<button class="edit" onclick="editCategory(this)">Edit</button>
 <button class="delete" onclick="deleteCategory(this)">Delete</button>
 </td>
 `;
 
+alert("Category added successfully!");
+
+}
+
 closeCategoryModal();
 
-/* clear form */
 document.getElementById("categoryName").value = "";
 document.getElementById("categoryDescription").value = "";
 
-/* success alert */
-alert("Category added successfully!");
+}
+
+//edit category function
+function editCategory(button){
+
+editingRow = button.closest("tr");
+
+let name = editingRow.children[1].innerText;
+let description = editingRow.children[4].innerText;
+let status = editingRow.querySelector("select").value;
+
+document.getElementById("categoryName").value = name;
+document.getElementById("categoryDescription").value = description;
+document.getElementById("categoryStatus").value = status;
+
+openCategoryModal();
+
+}
+
+//delete category function
+function deleteCategory(button){
+
+let row = button.closest("tr");
+let productCell = row.querySelector(".product-count");
+
+if(!productCell){
+alert("Product count not found.");
+return;
+}
+
+let productCount = parseInt(productCell.innerText);
+
+if(productCount > 0){
+alert("Cannot delete category because it still contains products.");
+return;
+}
+
+if(confirm("Are you sure you want to delete this category?")){
+row.remove();
+}
 
 }

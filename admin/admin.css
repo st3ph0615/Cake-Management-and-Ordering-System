@@ -353,3 +353,25 @@ font-weight:bold;
 .sidebar li:hover{
 background:#222;
 }
+/* Action buttons container */
+
+.action-buttons{
+display:flex;
+gap:6px;
+align-items:center;
+}
+
+/* Buttons */
+
+.edit,
+.delete{
+padding:4px 10px;
+border:1px solid #000;
+background:#fff;
+cursor:pointer;
+}
+
+.edit:hover,
+.delete:hover{
+background:#eee;
+}
