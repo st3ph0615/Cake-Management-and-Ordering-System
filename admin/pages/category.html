@@ -1,0 +1,224 @@
+<h2>Categories</h2>
+
+<div class="users-header">
+<button class="add-btn" onclick="openCategoryModal()">Add Category</button>
+</div>
+<div class="table-container">
+
+<table class="table">
+
+<thead>
+<tr>
+<th>#</th>
+<th>Category Name</th>
+<th>Products</th>
+<th>Status</th>
+<th>Description</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="categoryTable">
+
+<tr>
+<td>1</td>
+<td>Birthday Cakes 🎂</td>
+<td>12</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes designed for birthday celebrations.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Anniversary Cakes 💍</td>
+<td>5</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes for anniversary celebrations.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Wedding Cakes 👰🤵</td>
+<td>7</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Elegant multi-layer cakes for weddings.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Customized / Personalized Cakes ✨</td>
+<td>3</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Custom cakes based on customer requests.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Kids & Cartoon Theme Cakes 🧸</td>
+<td>6</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes designed with cartoon characters.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Graduation Cakes 🎓</td>
+<td>2</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes for graduation celebrations.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Baby Shower & Gender Reveal Cakes 👶</td>
+<td>4</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes for baby showers and gender reveals.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Corporate / Office Celebration Cakes 🏢</td>
+<td>3</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes for corporate events and office celebrations.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Holiday & Seasonal Cakes 🎄❤️</td>
+<td>5</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Cakes for holidays like Christmas, New Year, Valentine’s.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Minimalist / Bento Cakes 🍰</td>
+<td>8</td>
+<td>
+<select class="status-dropdown" aria-label="Category Status" onchange="updateCategoryStatus(this)">
+<option value="active" selected>Active</option>
+<option value="hidden">Hidden</option>
+</select>
+</td>
+<td>Small aesthetic cakes with minimalist design.</td>
+<td>
+<button class="edit">Edit</button>
+<button class="delete" onclick="deleteCategory(this)">Delete</button>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ADD CATEGORY MODAL -->
+
+<div id="categoryModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Add Category</h3>
+
+<label for="categoryName">Category Name</label>
+<input id="categoryName" type="text" placeholder="Enter category name">
+
+<label for="categoryDescription">Description</label>
+<textarea id="categoryDescription" placeholder="Enter description"></textarea>
+
+<label for="categoryStatus">Status</label>
+<select id="categoryStatus" aria-label="Category Status">
+<option value="active">Active</option>
+<option value="hidden">Hidden</option>
+</select>
+
+<div class="modal-buttons">
+<button class="save-btn" onclick="saveCategory()">Save</button>
+<button onclick="closeCategoryModal()">Cancel</button>
+</div>
+
+</div>
+
+</div>

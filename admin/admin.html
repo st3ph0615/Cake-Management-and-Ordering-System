@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SweetOrder Admin</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+    <h2>SweetOrder</h2>
+
+    <ul>
+    <li onclick="loadPage('home', this)">Home</li>
+    <li onclick="loadPage('orders', this)">Orders</li>
+    <li onclick="loadPage('menu', this)">Menu</li>
+    <li onclick="loadPage('category', this)">Categories</li>
+    <li onclick="loadPage('users', this)">Users</li>
+    <li onclick="loadPage('settings', this)">Settings</li>
+    </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div class="topbar-title">
+                Admin Dashboard
+            </div>
+
+            <div class="admin-menu">
+
+                <span class="admin-name">Admin</span>
+
+                <button class="profile-btn" onclick="toggleMenu()">☰</button>
+
+                <div class="admin-dropdown" id="adminDropdown">
+                    <a href="#">Profile</a>
+                    <a href="#" onclick="logout()">Logout</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PAGE CONTENT -->
+        <div class="content" id="content"></div>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

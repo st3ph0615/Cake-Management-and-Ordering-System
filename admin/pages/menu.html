@@ -1,0 +1,75 @@
+<h2>Cake Menu</h2>
+
+<button class="add-btn" onclick="openCakeModal()">+ Add Cake</button>
+
+<input type="text" id="searchCake" placeholder="Search cake..." onkeyup="searchCake()">
+
+<label for="categoryFilter">Filter Category</label>
+<select id="categoryFilter" onchange="filterCategory()">
+<option value="all">All Categories</option>
+<option value="birthday">Birthday</option>
+<option value="wedding">Wedding</option>
+<option value="cupcakes">Cupcakes</option>
+</select>
+
+<table class="table">
+
+<tr>
+<th>#</th>
+<th>Image</th>
+<th>Product</th>
+<th>Price</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td><img src="../cake1.jpg" class="product-img" alt=""></td>
+<td>
+<strong>Chocolate Cake</strong><br>
+Category: Birthday<br>
+Description: Rich chocolate layered cake
+</td>
+<td>$20</td>
+<td>
+<button class="edit" onclick="openEditCake('Chocolate Cake','Birthday','Rich chocolate cake',20)">Edit</button>
+<button class="delete" onclick="confirmDelete()">Delete</button>
+</td>
+</tr>
+
+</table>
+
+<!-- MODAL -->
+
+<div id="cakeModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Add Cake</h3>
+
+<input id="cakeName" type="text" placeholder="Cake Name">
+
+<textarea id="cakeDescription" placeholder="Description"></textarea>
+
+<label for="cakeCategory">Category</label>
+<select id="cakeCategory">
+<option>Birthday</option>
+<option>Wedding</option>
+<option>Cupcakes</option>
+</select>
+
+<input id="cakePrice" type="number" placeholder="Price">
+
+<label for="cakeImage">Image</label>
+<input type="file" id="cakeImage" onchange="previewImage(event)">
+
+<img id="preview" class="preview-img" alt="">
+
+<div class="modal-buttons">
+<button class="save-btn">Save</button>
+<button onclick="closeCakeModal()">Cancel</button>
+</div>
+
+</div>
+
+</div>

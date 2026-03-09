@@ -1,0 +1,41 @@
+<h2>Orders</h2>
+
+<table class="table">
+
+<tr>
+<th>Order ID</th>
+<th>Customer</th>
+<th>Date</th>
+<th>Total</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>#1001</td>
+<td>Maria</td>
+<td>May 21</td>
+<td>$45</td>
+<td>
+<label for="orderStatus1">Status</label>
+<select id="orderStatus1" class="status-dropdown" onchange="updateStatus(this)">
+<option value="Pending" selected>Pending</option>
+<option value="Baking">Baking</option>
+<option value="Ready">Ready</option>
+<option value="Delivered">Delivered</option>
+<option value="Cancelled">Cancelled</option>
+</select>
+</td>
+<td><button class="view-btn">View</button></td>
+</tr>
+
+<tr>
+<td>#1002</td>
+<td>John</td>
+<td>May 22</td>
+<td>$30</td>
+<td><span class="status baking">Baking</span></td>
+<td><button class="view-btn">View</button></td>
+</tr>
+
+</table>
