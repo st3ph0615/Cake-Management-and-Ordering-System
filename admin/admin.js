@@ -3,32 +3,28 @@ let editingRow = null;
 function loadPage(page, element){
 
 fetch("pages/" + page + ".html")
-.then(response => response.text())
+.then(response => {
+    if(!response.ok){
+        throw new Error("Page not found");
+    }
+    return response.text();
+})
 .then(data => {
-document.getElementById("content").innerHTML = data;
+    document.getElementById("content").innerHTML = data;
+})
+.catch(error => {
+    document.getElementById("content").innerHTML =
+    "<h2 style='padding:20px'>Error loading page</h2>";
+    console.error(error);
 });
 
-// remove previous active
 let links = document.querySelectorAll(".sidebar li");
 links.forEach(li => li.classList.remove("active"));
 
-// add active class if element exists
 if(element){
 element.classList.add("active");
 }
-
 }
-
-// Load home page when dashboard opens
-document.addEventListener("DOMContentLoaded", function(){
-
-let firstMenu = document.querySelector(".sidebar li a");
-
-if(firstMenu){
-loadPage("home", firstMenu);
-}
-
-});
 
 
 // ---------- Cake Modal ----------
@@ -284,5 +280,27 @@ return;
 if(confirm("Are you sure you want to delete this category?")){
 row.remove();
 }
+
+}
+
+//product count column (category page)
+function updateCategoryProductCount(categoryName, change){
+
+let rows = document.querySelectorAll("#categoryTable tr");
+
+rows.forEach(row => {
+
+let categoryCell = row.children[1];
+
+if(categoryCell && categoryCell.innerText.includes(categoryName)){
+
+let countCell = row.querySelector(".product-count");
+let count = parseInt(countCell.innerText);
+
+countCell.innerText = count + change;
+
+}
+
+});
 
 }
