@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login to your account</title>
 
-<link rel="stylesheet" href="Login.css">
+<link rel="stylesheet" href="login.css">
 
 <!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -24,28 +24,29 @@
     <div class="container">
         <!-- FORM CARD -->
          <div class="form-card">
+            <form action="login.php" method="POST">
             <h2>Login to your account</h2>
 
             <div class="input-box">
-                <input type="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Email" required>
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password" required>
                 <i class="fa-solid fa-lock"></i>
             </div>
             
-            <a href="homepage.html"><button class="signup-btn" >Sign Up</button></a>
+            <button type="submit" class="signup-btn">Login</button>
 
             
-            <a href="createAccount.html">
+            <a href="register.html">
                 <p class="login-text">Don't have an account?</p>
             </a>
             <a href="">
                 <p class="forgot-password">Forgot Password?</p>
             </a>
             
-
+            </form>
         </div>
 
         <!-- SIDE LOGO IMAGE -->

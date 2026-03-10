@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-    <link rel="stylesheet" href="checkout.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<link rel="stylesheet" href="checkout.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <section class="checkout-page">
-        <div class="checkout-container">
-            
-            <!-- LEFT SIDE -->
-             <div class="checkout-form">
-                <h2>Customer Information</h2>
-                <form id="order-form">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="text" placeholder="Phone Number" required>
-                    <textarea placeholder="Delivery Address" required></textarea>
-                    <h3>Payment Method</h3>
 
-<label>
+<section class="checkout-page">
+
+<h1 class="checkout-title">Checkout</h1>
+
+<div class="checkout-container">
+
+<!-- LEFT SIDE -->
+<div class="checkout-form">
+
+<h2>Customer Information</h2>
+
+<form id="order-form">
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name" required>
+</div>
+
+<div class="form-group">
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email" required>
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input type="text" placeholder="Enter your phone number" required>
+</div>
+
+<div class="form-group">
+<label>Delivery Address</label>
+<textarea placeholder="Enter your delivery address" required></textarea>
+</div>
+
+<h3 class="payment-title">Payment Method</h3>
+
+<div class="payment-methods">
+
+<label class="payment-option">
 <input type="radio" name="payment" checked>
-Cash on Delivery
+<span>Cash on Delivery</span>
 </label>
 
-<label>
+<label class="payment-option">
 <input type="radio" name="payment">
-Credit / Debit Card
+<span>Credit / Debit Card</span>
 </label>
+
+</div>
 
 <button type="submit" class="place-order">
 Place Order
@@ -40,13 +69,14 @@ Place Order
 
 </div>
 
-
 <!-- RIGHT SIDE -->
 <div class="order-summary">
 
 <h3>Order Summary</h3>
 
 <div id="checkout-items"></div>
+
+<hr>
 
 <div class="summary-row">
 <span>Subtotal</span>

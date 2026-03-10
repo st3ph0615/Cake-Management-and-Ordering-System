@@ -39,7 +39,7 @@ alert("Order placed successfully! 🎉");
 
 localStorage.removeItem("cart");
 
-window.location.href = "homepage.html";
+window.location.href = "./customer_homepage/home.html";
 
 });
 
