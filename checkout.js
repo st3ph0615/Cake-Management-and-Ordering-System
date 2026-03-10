@@ -44,3 +44,32 @@ window.location.href = "./customer_homepage/home.html";
 });
 
 });
+
+//order confirmation pop up
+const orderForm = document.getElementById("order-form");
+
+orderForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+// show popup
+document.getElementById("orderPopup").classList.add("active");
+
+// wait 5 seconds
+setTimeout(function(){
+
+// hide popup
+document.getElementById("orderPopup").classList.remove("active");
+
+// redirect to homepage
+window.location.href = "customer_homepage/home.html";
+
+}, 5000);
+
+});
+function closePopup(){
+
+document.getElementById("orderPopup").classList.remove("active");
+window.location.href = "customer_homepage/home.html";
+
+}

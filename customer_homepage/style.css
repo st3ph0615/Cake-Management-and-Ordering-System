@@ -307,17 +307,13 @@ color:#777;
 .search-bar{
     flex:1;
     padding:14px 20px;
-    border-radius:30px;
-    border:2px solid #e6a9ad;
     font-size:16px;
 }
 
 /*CATEGORY FILTER*/
 .category-filter{
-    padding:14px 20px;
-    border-radius:30px;
-    border:2px solid #e6a9ad;
-    font-size:16px;
+    padding: 8px 12px;
+    font-size:14px;
     background:white;
 }
 
@@ -334,14 +330,14 @@ color:#777;
 .product-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:40px;
-    width:1200px;
+    gap:20px;
+    width:1400px;
     margin:auto;
 }
 
 .product-card{
+    padding: 20px;
     background:#fff;
-    border-radius:12px;
     overflow: hidden;
     transition:0.3s;
 }

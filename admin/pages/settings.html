@@ -1,9 +1,50 @@
 <h2>Site Settings</h2>
 
-<label for="shopName">Shop Name</label><br>
-<input id="shopName" type="text" value="SweetOrder" placeholder="Enter shop name"><br><br>
+<div class="settings-container">
 
-<label for="deliveryFee">Delivery Fee</label><br>
-<input id="deliveryFee" type="text" value="5" placeholder="Enter delivery fee"><br><br>
+<!-- STORE INFORMATION -->
+<div class="settings-section">
+<h3>Store Information</h3>
 
-<button>Save</button>
+<label for="shopName">Shop Name</label>
+<input id="shopName" type="text" value="SweetOrder">
+
+<label for="shopEmail">Shop Email</label>
+<input id="shopEmail" type="email" placeholder="example@email.com">
+
+<label for="shopPhone">Contact Number</label>
+<input id="shopPhone" type="text" placeholder="+63 912 345 6789">
+
+</div>
+
+
+<!-- DELIVERY SETTINGS -->
+<div class="settings-section">
+<h3>Delivery Settings</h3>
+
+<label for="deliveryFee">Delivery Fee ($)</label>
+<input id="deliveryFee" type="number" value="5">
+
+</div>
+
+
+<!-- STORE APPEARANCE -->
+<div class="settings-section">
+<h3>Branding</h3>
+
+<label for="logoUpload">Upload Store Logo</label>
+<input id="logoUpload" type="file">
+
+</div>
+
+
+<!-- SAVE BUTTON -->
+<div class="settings-actions">
+
+<button class="save-btn">
+Save Settings
+</button>
+
+</div>
+
+</div>

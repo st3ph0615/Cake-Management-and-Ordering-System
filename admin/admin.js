@@ -2,16 +2,19 @@ let editingRow = null;
 // Load page and highlight active menu
 function loadPage(page, element){
 
-fetch("pages/" + page + ".html")
+fetch("pages/" + page + ".html?nocache=" + new Date().getTime())
+
 .then(response => {
     if(!response.ok){
         throw new Error("Page not found");
     }
     return response.text();
 })
+
 .then(data => {
     document.getElementById("content").innerHTML = data;
 })
+
 .catch(error => {
     document.getElementById("content").innerHTML =
     "<h2 style='padding:20px'>Error loading page</h2>";
@@ -24,6 +27,7 @@ links.forEach(li => li.classList.remove("active"));
 if(element){
 element.classList.add("active");
 }
+
 }
 
 
